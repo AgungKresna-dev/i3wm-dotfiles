@@ -60,6 +60,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec $launcher2
 bindsym $mod+Shift+d exec $launcher1
 
+# Exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
 # ------------------------------------------------------------------------------
 # 4. Keybindings: Navigation & Layouts
 # ------------------------------------------------------------------------------
@@ -138,7 +141,7 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status --config ~/.config/i3/i3status/config
         
-        position bottom
+        position top
         workspace_buttons yes
         strip_workspace_numbers yes
 
@@ -158,7 +161,6 @@ bar {
 # ------------------------------------------------------------------------------
 # 8. Autostart Applications
 # ------------------------------------------------------------------------------
-# Note: `--no-startup-id` prevents startup notification (spinning cursor)
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id nm-applet
 exec --no-startup-id dunst
