@@ -40,6 +40,17 @@ default_border pixel 2
 default_floating_border normal 2
 hide_edge_borders none
 
+# --- i3-gaps Configuration ---
+# Inner gaps: Celah antar jendela (dalam piksel)
+gaps inner 10
+
+# Outer gaps: Celah antara jendela dengan tepi layar monitor
+gaps outer 5
+
+# Hanya tampilkan border jika ada lebih dari satu jendela di satu workspace
+#smart_borders on
+# ------------------------------
+
 # Window Colors (Dracula Theme Spec)
 # class                 border                  background              text                indicator       child_border
 client.focused          $dracula-purple         $dracula-purple         $dracula-bg         $dracula-pink   $dracula-purple
