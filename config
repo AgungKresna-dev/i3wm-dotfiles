@@ -176,19 +176,25 @@ bar {
         
         # 5.7 Remove number prefixes from workspace names
         strip_workspace_numbers yes
+        strip_workspace_name yes
         
         # 5.8 Binding mode indicator toggle on the bar
         binding_mode_indicator yes
         
         # 5.9 Font configuration and height/vertical padding adjustments
-        font pango:Lilex Nerd Font 10
+        font pango:Lilex Nerd Font 11
         workspace_min_width 50
         padding 2px 0
         tray_padding 5px
-        
-        # 5.10 Mouse wheel action toggles (switch workspaces using scroll)
-        wheel_up_cmd workspace next
-        wheel_down_cmd workspace prev
+
+        # 5.10 Disable clicking on workspace buttons
+        bindsym button1 nop
+        bindsym button2 nop
+        bindsym button3 nop
+        bindsym button4 nop
+        bindsym button5 nop
+        bindsym button6 nop
+        bindsym button7 nop
 
         # 5.11 Detailed color palette definitions (Dracula Spec Integration)
         colors {
