@@ -10,6 +10,8 @@ general {
         color_good = "#50fa7b"      # Dracula Green
         color_degraded = "#f1fa8c"  # Dracula Yellow
         color_bad = "#ff5555"       # Dracula Red
+        # Disable the default pipeline character separator
+        output_format = "none"
 }
 
 # Order of status bar items (Strictly ordered as requested)
@@ -23,47 +25,47 @@ order += "battery all"
 order += "tztime local"
 
 volume master {
-        format = "♪: %volume"
-        format_muted = "♪: muted (%volume)"
+        format = "󰕾 %volume"
+        format_muted = "󰝟 muted (%volume)"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
 }
 
 load {
-        format = "Load: %1min"
+        format = "󰓅 %1min"
 }
 
 cpu_usage {
-        format = "CPU: %usage"
+        format = "󰍛 %usage"
 }
 
 cpu_temperature 0 {
-        format = "Temp: %degrees °C"
+        format = "󰔏 %degrees °C"
         path = "/sys/class/thermal/thermal_zone0/temp"
 }
 
 memory {
-        format = "Mem: %used / %available"
+        format = " 󰘚 %used / %available "
         threshold_degraded = "1G"
-        format_degraded = "MEMORY LOW: %available"
+        format_degraded = " 󰘚 MEMORY LOW: %available "
 }
 
 disk "/" {
-        format = "Disk: %avail"
+        format = " 󰋊 %avail "
 }
 
 battery all {
-        format = "%status %percentage %remaining"
-        format_down = "No battery"
-        status_chr = "⚡ CHR"
-        status_bat = "🔋 BAT"
-        status_unk = "? UNK"
-        status_full = "☻ FULL"
+        format = " %status %percentage %remaining "
+        format_down = " 󰁹 No battery "
+        status_chr = "󰂄 CHR"
+        status_bat = "󰁹 BAT"
+        status_unk = "󰂑 UNK"
+        status_full = "󰁹 FULL"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M:%S"
+        format = "󰥔 %H:%M | 󰸗 %d/%m/%Y"
 }
