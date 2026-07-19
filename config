@@ -1,7 +1,7 @@
 # ==============================================================================
 # i3wm CONFIGURATION FILE
 # Optimized for Keyboard-Driven Productivity & Clean Portfolios
-# Theme: Dracula (Official Spec)
+# Theme: Dracula (Official Spec) with i3-gaps enabled
 # Reference: https://i3wm.org/docs/userguide.html#configuring
 # ==============================================================================
 
@@ -30,7 +30,7 @@ set $dracula-red          #ff5555
 set $dracula-yellow       #f1fa8c
 
 # ------------------------------------------------------------------------------
-# 2. Fonts & Visuals
+# 2. Fonts & Visuals (Including i3-gaps Settings)
 # ------------------------------------------------------------------------------
 # Font for window titles and bar
 font pango:Lilex Nerd Font Mono 10
@@ -41,13 +41,13 @@ default_floating_border normal 2
 hide_edge_borders none
 
 # --- i3-gaps Configuration ---
-# Inner gaps: Celah antar jendela (dalam piksel)
+# Inner gaps: Space between windows
 gaps inner 10
 
-# Outer gaps: Celah antara jendela dengan tepi layar monitor
+# Outer gaps: Space between windows and screen edges
 gaps outer 5
 
-# Hanya tampilkan border jika ada lebih dari satu jendela di satu workspace
+# Only show borders if there is more than one window on a workspace
 #smart_borders on
 # ------------------------------
 
