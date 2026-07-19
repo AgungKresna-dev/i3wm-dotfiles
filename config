@@ -33,7 +33,7 @@ set $dracula-yellow       #f1fa8c
 # 2. Fonts & Visuals (Including i3-gaps Settings)
 # ------------------------------------------------------------------------------
 # Font for window titles and bar
-font pango:Lilex Nerd Font Mono 10
+font pango:Lilex Nerd Font 10
 
 # Thin borders for a modern look
 default_border pixel 2
@@ -116,12 +116,12 @@ bindsym $mod+space focus mode_toggle
 # ------------------------------------------------------------------------------
 # 5. Workspaces Configuration
 # ------------------------------------------------------------------------------
-# Define Workspace Names
-set $ws1 "1: Terminal"
-set $ws2 "2: Web"
-set $ws3 "3: Code"
-set $ws4 "4: Chat"
-set $ws5 "5: Media"
+# Define Workspace Names with Nerd Font Glyphs
+set $ws1 "1:󰆍 "
+set $ws2 "2:󰖟 "
+set $ws3 "3:󰲋 "
+set $ws4 "4:󰭹 "
+set $ws5 "5:󰝚 "
 
 # Switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -153,15 +153,44 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # ------------------------------------------------------------------------------
-# 7. Status Bar Configuration
+# 7. Status Bar Configuration (Implementing Chapter 5 Opsi Lengkap)
 # ------------------------------------------------------------------------------
 bar {
+        # 5.1 i3status command invocation
         status_command i3status --config ~/.config/i3/i3status/config
         
+        # 5.2 Bar positioning (top or bottom)
         position top
+        
+        # 5.3 Display mode (dock, hide, or invisible)
+        mode dock
+        
+        # 5.4 Modifier key to toggle bar visibility when hidden (e.g., Mod4)
+        modifier Mod4
+        
+        # 5.5 Monitor/Output selection (uncomment to bind to specific monitors)
+        # output primary
+        
+        # 5.6 Workspace interactive buttons toggle
         workspace_buttons yes
+        
+        # 5.7 Remove number prefixes from workspace names
         strip_workspace_numbers yes
+        
+        # 5.8 Binding mode indicator toggle on the bar
+        binding_mode_indicator yes
+        
+        # 5.9 Font configuration and height/vertical padding adjustments
+        font pango:Lilex Nerd Font 10
+        workspace_min_width 50
+        padding 2px 0
+        tray_padding 5px
+        
+        # 5.10 Mouse wheel action toggles (switch workspaces using scroll)
+        wheel_up_cmd workspace next
+        wheel_down_cmd workspace prev
 
+        # 5.11 Detailed color palette definitions (Dracula Spec Integration)
         colors {
                 background $dracula-bg
                 statusline $dracula-fg
@@ -172,6 +201,7 @@ bar {
                 active_workspace   $dracula-curnt-line    $dracula-curnt-line    $dracula-fg
                 inactive_workspace $dracula-bg            $dracula-bg            $dracula-comment
                 urgent_workspace   $dracula-red           $dracula-red           $dracula-fg
+                binding_mode       $dracula-red           $dracula-red           $dracula-bg
         }
 }
 
