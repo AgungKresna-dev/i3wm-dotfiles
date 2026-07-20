@@ -277,6 +277,13 @@ no_focus [class="(?i)firefox" title="^Picture-in-Picture$"]
 for_window [class="^zen$" title="^Picture-in-Picture$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px
 no_focus [class="^zen$" title="^Picture-in-Picture$"]
 
+# MPV Standard Mode: Treat like Picture-in-Picture (Floating, bottom-right, no focus)
+for_window [class="^mpv$" window_role="^mpv$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px
+no_focus [class="^mpv$" window_role="^mpv$"]
+
+# MPV Fullscreen Mode: Force full override and automatically grab input focus
+for_window [class="^mpv$" window_role="^mpv-fullscreen$"] floating disable, focus
+
 # WS1: Core Tiling Terminal Routing (Bypasses kitty-floating class)
 assign [class="^kitty$"] $ws1
 
