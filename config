@@ -258,3 +258,15 @@ exec --no-startup-id feh --bg-fill ~/.config/i3/wallpapers/linux-arch-dark.jpg
 # ------------------------------------------------------------------------------
 # Automatically format the dedicated floating terminal with 50% width and 50% height
 for_window [class="kitty-floating"] floating enable, resize set 50 ppt 50 ppt, move position center
+
+# WS1: Core Tiling Terminal Routing (Bypasses kitty-floating class)
+assign [class="^kitty$"] $ws1
+
+# WS2: Modern Web Browsers Routing
+assign [class="^Google-chrome$"] $ws2
+assign [class="^firefox$"] $ws2
+assign [class="^zen$"] $ws2
+
+# WS3: File Managers Routing
+assign [class="^Pcmanfm$"] $ws3
+assign [class="^pcmanfm-qt$"] $ws3
