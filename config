@@ -119,9 +119,8 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
-# Split in horizontal / vertical orientation
-bindsym $mod+b split h
-bindsym $mod+v split v
+# Toggle split direction (Horizontal <-> Vertical) using a single keybinding
+bindsym $mod+q split toggle
 
 # Enter fullscreen mode
 bindsym $mod+f fullscreen toggle
@@ -160,6 +159,13 @@ bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
 bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
+
+# Cycle through workspaces sequentially (Left / Right)
+bindsym $mod+Prior workspace prev
+bindsym $mod+Next workspace next
+
+# Toggle back and forth between the two most recently focused workspaces
+bindsym $mod+Tab workspace back_and_forth
 
 # ------------------------------------------------------------------------------
 # 6. Resizing Mode
