@@ -36,9 +36,9 @@ set $dracula-yellow       #f1fa8c
 font pango:Lilex Nerd Font 10
 
 # Thin borders for a modern look
-default_border pixel 2
-default_floating_border normal 2
-hide_edge_borders none
+default_border pixel 3
+default_floating_border normal 3
+hide_edge_borders smart
 
 # --- i3-gaps Configuration ---
 # Inner gaps: Space between windows
