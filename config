@@ -264,6 +264,11 @@ for_window [workspace=$ws3] layout tabbed
 # Automatically format the dedicated floating terminal with 50% width and 50% height
 for_window [class="kitty-floating"] floating enable, resize set 50 ppt 50 ppt, move position center
 
+# Force Places window instances (Bookmarks, History, Library managers) into floating mode
+for_window [class="(?i)firefox" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
+for_window [class="^zen$" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
+for_window [class="^Xdm-app$"] floating enable, resize set 50 ppt 50 ppt, move position center
+
 # WS1: Core Tiling Terminal Routing (Bypasses kitty-floating class)
 assign [class="^kitty$"] $ws1
 
