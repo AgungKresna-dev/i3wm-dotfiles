@@ -252,3 +252,9 @@ exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id picom -b
 exec --no-startup-id feh --bg-fill ~/.config/i3/wallpapers/linux-arch-dark.jpg
+
+# ------------------------------------------------------------------------------
+# 9. Window Rules & Custom Target Routings
+# ------------------------------------------------------------------------------
+# Automatically format the dedicated floating terminal with 50% width and 50% height
+for_window [class="kitty-floating"] floating enable, resize set 50 ppt 50 ppt, move position center
