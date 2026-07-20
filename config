@@ -269,6 +269,12 @@ for_window [class="(?i)firefox" instance="^Places$"] floating enable, resize set
 for_window [class="^zen$" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
 for_window [class="^Xdm-app$"] floating enable, resize set 50 ppt 50 ppt, move position center
 
+# Force Firefox Picture-in-Picture window into floating, precise size, and bottom-right position
+for_window [class="(?i)firefox" title="^Picture-in-Picture$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px
+
+# Force Zen Browser Picture-in-Picture window into floating, precise size, and bottom-right position
+for_window [class="^zen$" title="^Picture-in-Picture$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px
+
 # WS1: Core Tiling Terminal Routing (Bypasses kitty-floating class)
 assign [class="^kitty$"] $ws1
 
