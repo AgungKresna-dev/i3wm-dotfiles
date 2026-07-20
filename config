@@ -267,7 +267,6 @@ for_window [class="kitty-floating"] floating enable, resize set 50 ppt 50 ppt, m
 # Force Places window instances (Bookmarks, History, Library managers) into floating mode
 for_window [class="(?i)firefox" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
 for_window [class="^zen$" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
-for_window [class="^Xdm-app$"] floating enable, resize set 50 ppt 50 ppt, move position center
 
 # Force Firefox Picture-in-Picture window into floating, precise size, and bottom-right position
 for_window [class="(?i)firefox" title="^Picture-in-Picture$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px, sticky enable
@@ -283,6 +282,15 @@ no_focus [class="^mpv$" window_role="^mpv$"]
 
 # MPV Fullscreen Mode: Force full override and automatically grab input focus
 for_window [class="^mpv$" window_role="^mpv-fullscreen$"] floating disable, focus
+
+# XDM Main Dashboard View Layout Constraints
+for_window [class="^Xdm-app$" title="^Xtreme Download Manager$"] floating enable, resize set 75 ppt 75 ppt, move position center
+
+# XDM Intercept Target for New Download Popup Trigger Events
+for_window [class="^Xdm-app$" title="^New Download$"] floating enable, resize set 30 ppt 15 ppt, move position center
+
+# XDM Intercept Target for Settings Window Panel Configuration
+for_window [class="^Xdm-app$" title="^Settings$"] floating enable, resize set 50 ppt 50 ppt, move position center
 
 # WS1: Core Tiling Terminal Routing (Bypasses kitty-floating class)
 assign [class="^kitty$"] $ws1
