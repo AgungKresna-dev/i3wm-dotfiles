@@ -110,6 +110,16 @@ bindsym $mod+XF86AudioMute exec --no-startup-id "wpctl set-mute @DEFAULT_AUDIO_S
 # ------------------------------------------------------------------------------
 # 4. Keybindings: Navigation & Layouts
 # ------------------------------------------------------------------------------
+
+# Mouse Bindings
+# Mod+Left Click: Drag floating windows to move them (Default i3 behavior)
+# Mod+Right Click: Drag to resize windows from any edge (Default i3 behavior)
+floating_modifier $mod
+
+# Mod+Middle Click: Toggle window state between floating and tiling seamlessly
+# bindsym --whole-window $mod+button2 floating toggle
+bindsym --whole-window $mod+button2 kill
+
 # Change focus (Vim-style navigation)
 bindsym $mod+h focus left
 bindsym $mod+j focus down
