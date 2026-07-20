@@ -64,6 +64,9 @@ client.urgent           $dracula-red            $dracula-red            $dracula
 # Start terminal
 bindsym $mod+Return exec $terminal
 
+# Special Floating Terminal (Launches with a unique X11 window class)
+bindsym $mod+Shift+Return exec --no-startup-id kitty --class kitty-floating
+
 # Kill focused window
 bindsym $mod+Shift+q kill
 
