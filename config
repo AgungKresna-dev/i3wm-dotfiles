@@ -295,6 +295,12 @@ for_window [class="kitty-floating"] floating enable, resize set 50 ppt 50 ppt, m
 for_window [class="(?i)firefox" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
 for_window [class="^zen$" instance="^Places$"] floating enable, resize set 50 ppt 50 ppt, move position center
 
+# Force floating for Firefox windows with dynamic titles starting with "Torrents"
+for_window [class="(?i)firefox" instance="^Navigator$" title="^Torrents.*"] floating enable, resize set 33 ppt 50 ppt, move position center
+
+# Force floating for Zen Browser windows with dynamic titles starting with "Torrents"
+for_window [class="^zen$" instance="^Navigator$" title="^Torrents.*"] floating enable, resize set 33 ppt 50 ppt, move position center
+
 # Force Firefox Picture-in-Picture window into floating, precise size, and bottom-right position
 for_window [class="(?i)firefox" title="^Picture-in-Picture$"] floating enable, resize set 25 ppt 25 ppt, move window to position 1420 px 790 px, sticky enable
 no_focus [class="(?i)firefox" title="^Picture-in-Picture$"]
